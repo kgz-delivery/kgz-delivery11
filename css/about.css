@@ -1,0 +1,287 @@
+/* О компании — CYBER SPACE */
+
+.about-page {
+  padding-top: var(--nav-total);
+  overflow-x: hidden;
+}
+
+.about-hero {
+  position: relative;
+  padding: clamp(2rem, 6vw, 4rem) max(1rem, var(--safe-left)) clamp(2.5rem, 6vw, 4rem) max(1rem, var(--safe-right));
+  text-align: center;
+  min-height: min(52vh, 520px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  transform: translate(var(--mx, 0px), var(--my, 0px));
+  transition: transform 0.35s ease-out;
+}
+
+.about-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.1;
+  animation: about-orb-float 20s ease-in-out infinite;
+}
+
+.about-orb--a {
+  width: min(70vw, 480px);
+  height: min(70vw, 480px);
+  background: radial-gradient(circle, var(--purple) 0%, transparent 68%);
+  top: -20%;
+  right: -15%;
+}
+
+.about-orb--b {
+  width: min(50vw, 360px);
+  height: min(50vw, 360px);
+  background: radial-gradient(circle, var(--purple-deep) 0%, transparent 68%);
+  bottom: -10%;
+  left: -10%;
+  animation-delay: -8s;
+  animation-duration: 24s;
+}
+
+@keyframes about-orb-float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-5%, 6%); }
+}
+
+.about-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+}
+
+.about-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.85rem, 5.5vw, 3.25rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+  background: linear-gradient(115deg, var(--white) 15%, var(--purple-bright) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.about-hero .about-lead {
+  color: var(--muted-light);
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.about-section-block {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 max(1rem, var(--safe-left)) clamp(2.5rem, 5vw, 4rem) max(1rem, var(--safe-right));
+}
+
+.about-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+  box-shadow: 0 8px 32px rgba(24, 24, 27, 0.06);
+}
+
+.about-card h2 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.15rem, 3vw, 1.5rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 1.25rem;
+  color: var(--white);
+}
+
+.about-card p {
+  color: var(--muted-light);
+  line-height: 1.7;
+  margin: 0 0 1rem;
+  font-size: 0.98rem;
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+.about-values-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 2rem;
+  color: var(--white);
+}
+
+.values-grid-about {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: 1.25rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.value-tile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s, box-shadow 0.35s;
+}
+
+.value-tile:hover {
+  transform: translateY(-6px);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 12px 36px rgba(24, 24, 27, 0.08);
+}
+
+@media (hover: none) {
+  .value-tile:hover {
+    transform: none;
+  }
+}
+
+.value-tile-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+
+.value-tile h3 {
+  font-size: 0.82rem;
+  margin: 0 0 0.65rem;
+}
+
+.value-tile p {
+  margin: 0;
+  color: var(--muted-light);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.about-section-block .stat-strip {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.team-section-about h2 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 2rem;
+  color: var(--white);
+}
+
+.team-grid-about {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  gap: 1.25rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.team-tile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+
+.team-tile:hover {
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.team-avatar {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.15), rgba(30, 58, 138, 0.22));
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+}
+
+.team-tile h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  margin: 0 0 0.35rem;
+  color: var(--white);
+}
+
+.team-role {
+  color: var(--purple-bright);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 0.65rem;
+}
+
+.team-tile .team-bio {
+  font-size: 0.88rem;
+  color: var(--muted-light);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.about-cta {
+  text-align: center;
+  padding: clamp(2rem, 5vw, 3rem);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  margin-bottom: max(2rem, var(--safe-bottom));
+}
+
+.about-cta h2 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.15rem, 3vw, 1.5rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+  color: var(--white);
+}
+
+.about-cta p {
+  color: var(--muted-light);
+  max-width: 520px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+.about-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.about-cta .btn-primary,
+.about-cta .btn-ghost {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

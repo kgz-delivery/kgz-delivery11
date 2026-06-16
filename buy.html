@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0a1628">
+    <meta name="color-scheme" content="dark">
+    <title>CYBER SPACE — товар</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Orbitron:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/pulsar.css">
+    <link rel="stylesheet" href="css/buy.css">
+    <link rel="stylesheet" href="css/page-transitions.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '924798157004137');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=924798157004137&ev=PageView&noscript=1"
+/></noscript>
+
+<header class="buy-header" id="buyHeader">
+    <div class="buy-header-inner">
+        <a class="buy-brand" href="index.html"><img src="imgs/1logo.png" alt="CYBER SPACE" class="nav-brand-logo" width="160" height="42"></a>
+        <p class="buy-tagline">Детали сборки и заказ в WhatsApp</p>
+    </div>
+</header>
+
+<div class="buy-wrap">
+    <div class="product-detail" id="productDetail"></div>
+    <a href="index.html" class="back-btn">← В каталог</a>
+</div>
+
+<footer class="buy-footer">
+    <div class="buy-footer-inner">
+        <div class="footer-actions">
+            <a href="about.html" class="footer-nav-btn">О нас</a>
+            <a href="otz.html" class="footer-nav-btn">Отзывы</a>
+            <a href="index.html" class="footer-nav-btn footer-nav-btn--primary">На главную</a>
+        </div>
+    </div>
+    <div class="footer-legal">
+        <p class="footer-contact">Связь: <a href="mailto:cyber_space.kg@gmail.com">cyber_space.kg@gmail.com</a> <span class="footer-sep">|</span> Телефон: <a href="tel:+996556024449">+996 (556) 02-44-49</a></p>
+        <p class="footer-copy">© 2025 Компания «CYBER SPACE.kg». Все права защищены.</p>
+        <p class="footer-credit">Разработка сайта: By CYBER SPACE company</p>
+    </div>
+</footer>
+
+<script>
+    // Карточки 
+    const products = {
+        1: {
+            id: 1,
+            name: "STORM",
+            image: "imgs/pc1-20k.jpg",
+            price: 20000,
+            oldPrice: 24000,
+            specs: {
+                "Процессор": "Intel Core i3-9100F",
+                "Видеокарта": "GTX 1050ti 4GB",
+                "Оперативная память": "16GB DDR4",
+                "Накопитель": "SSD 480GB + HDD 1TB",
+                "Материнская плата": "Gigabyte H310M",
+                "Блок питания": "500W 80+ Bronze",
+                "Корпус": "Storm Silence с RGB подсветкой",
+                "Охлаждение": "2 вентилятора 120mm"
+            },
+            description: "Идеальный компьютер для начинающих геймеров и работы с офисными приложениями. Отличное соотношение цены и производительности."
+        },
+        2: {
+            id: 2,
+            name: "GOLD RUSH",
+            image: "imgs/18k.jpg",
+            price: 16500,
+            oldPrice: 22000,
+            specs: {
+                "Процессор": "Intel Core i3-8100F",
+                "Видеокарта": "GTX 1060 6GB",
+                "Оперативная память": "16GB DDR4",
+                "Накопитель": "SSD 240GB + HDD 500GB",
+                "Материнская плата": "Gigabyte H310M",
+                "Блок питания": "450W 80+",
+                "Корпус": "Gold Strange (чёрный)",
+                "Охлаждение": "Стандартный кулер процессора"
+            },
+            description: "Мощный компьютер для игр в Full HD разрешении. Отличная производительность в популярных играх."
+        },
+        3: {
+            id: 3,
+            name: "NEXUS",
+            image: "imgs/pc3-24k.jpg",
+            price: 21500,
+            oldPrice: 26000,
+            specs: {
+                "Процессор": "Intel Core i5-12100F",
+                "Видеокарта": "GTX 1660 ti",
+                "Оперативная память": "16GB DDR4",
+                "Накопитель": "SSD 512GB",
+                "Материнская плата": "MSI B660M",
+                "Блок питания": "DeepCool 600W 80+ Bronze",
+                "Корпус": "PC GEN-Z с прозрачной боковой панелью",
+                "Охлаждение": "Кулер с RGB подсветкой"
+            },
+            description: "Современный компьютер на базе процессора 12-го поколения. Отличный выбор для игр и многозадачной работы."
+        },
+        4: {
+            id: 4,
+            name: "WRAITH",
+            image: "imgs/pc2-19k.jpg",
+            price: 16000, 
+            oldPrice: null,
+            specs: {
+                "Процессор": "Intel Core i3 9100F",
+                "Видеокарта": "GTX 1050 ti",
+                "Оперативная память": "8GB DDR4",
+                "Накопитель": "SSD 240GB",
+                "Материнская плата": "Gigabyte H310M",
+                "Блок питания": "Aerocool 400W",
+                "Корпус": "Ghost Warrior (белый)",
+                "Охлаждение": "Стандартный кулер"
+            },
+            description: "Бюджетный игровой компьютер для нетребовательных игр и повседневных задач, Цена Указана за Системник"
+        },
+		14: {
+            id: 14,
+            name: "FORGE",
+            image: "imgs/pc14.jpg",
+            price: 28750,
+            oldPrice: 38000,
+            specs: {
+                "Процессор": "Intel Core I5-10400f",
+                "Видеокарта": "Gigabyte Gtx 1660 Ti",
+                "Оперативная память": "16Gb DDR4 3200MHz XPG G GAME",
+                "Накопитель": "SSD SATA Kingston 500GB + 1TB HDD",
+                "Материнская плата": "ASRock B450 Steel Legend",
+                "Блок питания": "DeepCool PF650",
+                "Корпус": "DEEP COOL DA6000",
+                "Охлаждение": "Deep Cool MARC300 RGB+3 RGB Cooler"
+            },
+            description: "Мощный Пк основанная и отпимизированная именно для тяжелых игр на Ультра настройках, готов выигрывать в любых матчах!."
+        },
+        5: {
+            id: 5,
+            name: "FURY",
+            image: "imgs/pc4-34k.jpg",
+            price: 36800,
+            oldPrice: 42000,
+            specs: {
+                "Процессор": "AMD Ryzen5 5600",
+                "Видеокарта": "Radeon RX 6600 xt",
+                "Оперативная память": "16GB DDR5 RGB",
+                "Накопитель": "SSD 1TB",
+                "Материнская плата": "ASUS TUF B550",
+                "Блок питания": "Corsair 650W 80+ Gold",
+                "Корпус": "Pro Gaming с RGB подсветкой",
+                "Охлаждение": "Система жидкостного охлаждения"
+            },
+            description: "Мощный игровой компьютер для комфортной игры в 2K разрешении. Подходит для стриминга и профессиональной работы с графикой."
+        },
+        6: {
+            id: 6,
+            name: "TITAN",
+            image: "imgs/pc6.jpg",
+            price: 28999,
+            oldPrice: 34800,
+            specs: {
+                "Процессор": "Intel Core i3-10100F",
+                "Видеокарта": "GTX 1660ti 6GB",
+                "Оперативная память": "16GB DDR4",
+                "Накопитель": "SSD 512GB + HDD 1TB",
+                "Материнская плата": "ASUS Prime H510M",
+                "Блок питания": "DeepCool 550W 80+ Bronze",
+                "Корпус": "Titan Fusion с RGB",
+                "Охлаждение": "3 вентилятора 120mm"
+            },
+            description: "Мощный компьютер для игр и работы. Отличное соотношение цены и производительности."
+        },
+        7: {
+            id: 7,
+            name: "PHOENIX",
+            image: "imgs/pc7.jpg",
+            price: 48000,
+            oldPrice: 54000,
+            specs: {
+                "Процессор": "Intel Core i5-14400KFX",
+                "Видеокарта": "RTX 4060ti 8GB",
+                "Оперативная память": "32GB DDR4 RGB",
+                "Накопитель": "SSD 1TB NVMe M.2",
+                "Материнская плата": "MSI B760M",
+                "Блок питания": "750W 80+ Gold",
+                "Корпус": "Phoenix с прозрачной панелью",
+                "Охлаждение": "Система жидкостного охлаждения"
+            },
+            description: "Мощный игровой компьютер для стриминга и профессиональной работы с графикой."
+        },
+        8: {
+            id: 8,
+            name: "APEX",
+            image: "imgs/pc8.jpg",
+            price: 64500,
+            oldPrice: 75000,
+            specs: {
+                "Процессор": "Intel Core i7-12700kf",
+                "Видеокарта": "RTX 4070ti Super 12GB",
+                "Оперативная память": "32GB DDR4 RGB",
+                "Накопитель": "SSD 512GB NVMe",
+                "Материнская плата": "Gigabyte B660M",
+                "Блок питания": "600W 80+ Bronze",
+                "Корпус": "Neon Storm с RGB подсветкой",
+                "Охлаждение": "Кулер с подсветкой"
+            },
+            description: "Стильный компьютер с RGB подсветкой для геймеров и креативных профессионалов."
+        },
+        9: {
+            id: 9,
+            name: "SHADOW",
+            image: "imgs/pc9.jpg",
+            price: 28000,
+            oldPrice: 32400,
+            specs: {
+                "Процессор": "Intel Core i3 12100F",
+                "Видеокарта": "GTX 1660 ti 6gb",
+                "Оперативная память": "16GB DDR4",
+                "Накопитель": "SSD 1TB NVMe M.2",
+                "Материнская плата": "ASRock B550M",
+                "Блок питания": "650W 80+ Gold",
+                "Корпус": "Cyber Phantom с RGB",
+                "Охлаждение": "Система воздушного охлаждения"
+            },
+            description: "Производительный компьютер на базе AMD для игр и профессиональных задач."
+        },
+        10: {
+            id: 10,
+            name: "PULSE",
+            image: "imgs/pc10.jpg",
+            price: 17400,
+            oldPrice: 20800,
+            specs: {
+                "Процессор": "Intel Core i3-10100F",
+                "Видеокарта": "RX 570 4GB",
+                "Оперативная память": "8GB DDR4",
+                "Накопитель": "SSD 480GB",
+                "Материнская плата": "ASUS H410M",
+                "Блок питания": "450W",
+                "Корпус": "Currown Gamer",
+                "Охлаждение": "Стандартный кулер"
+            },
+            description: "Бюджетный вариант для начинающих геймеров и офисной работы."
+        },
+		11: {
+            id: 11,
+            name: "VOLT",
+            image: "imgs/pc11.jpg",
+            price: 38400,
+            oldPrice: 43500,
+            specs: {
+                "Процессор": "Intel Core i5 12400F",
+                "Видеокарта": " RTX 3060 12Gb GDDR6 128Bit Inno3D",
+                "Оперативная память": "32Gb DDR4 3200MHz Kingston Fury",
+                "Накопитель": "SSD 1Tb NVMe Kingston NV3",
+                "Материнская плата": "Gigabyte B760M D3HP DDR4",
+                "Блок питания": "Formula AP 750MM",
+                "Корпус": "Currown Gamer",
+                "Охлаждение": "Formula Ice Burg Plus 4P +4 RGB Cooler"
+            },
+            description: "Готовый зверь для любых задач!."
+        },
+		12: {
+            id: 12,
+            name: "GLACIER",
+            image: "imgs/pc12.jpg",
+            price: 36300,
+            oldPrice: 44000,
+            specs: {
+                "Процессор": "Intel Core i5 12400F",
+                "Видеокарта": " RTX 3060 12Gb GDDR6 128Bit Inno3D",
+                "Оперативная память": "32Gb DDR4 3200MHz XPG G GAME",
+                "Накопитель": "SSD 1Tb NVMe Kingston NV3",
+                "Материнская плата": "Gigabyte B760M D3HP DDR4",
+                "Блок питания": "Formula AP 750MM",
+                "Корпус": "Corsair CTP 20Pl",
+                "Охлаждение": "Formula Ice Burg Plus 4P +4 RGB Cooler"
+            },
+            description: "Мощный ПК на Основе RTX 3060 и I5 12 поколения, готов для многих тяжелых задач!!."
+        },
+		13: {
+            id: 13,
+            name: "VORTEX",
+            image: "imgs/pc13.jpg",
+            price: 38400,
+            oldPrice: 46800,
+            specs: {
+                "Процессор": "Ryzen 5 5600X",
+                "Видеокарта": "Gigabyte RTX 3060 TI",
+                "Оперативная память": "32Gb DDR4 3200MHz XPG G GAME",
+                "Накопитель": "SSD m2 Kingston 480GB",
+                "Материнская плата": "ASRock B450 Steel Legend",
+                "Блок питания": "DeepCool Dn650",
+                "Корпус": "DEEP COOL Gamer",
+                "Охлаждение": "Deep Cool Arc300 RGB+3 RGB Cooler"
+            },
+            description: "Мощный Пк основанная и отпимизированная именно для тяжелых игр на Ультра настройках, готов выигрывать в любых матчах!."
+        }
+		
+    };
+
+    // Получение ID товара из URL
+    function getProductIdFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('id');
+    }
+
+function orderViaWhatsApp(productId) {
+    const product = products[productId];
+    if (!product) {
+        alert('Товар не найден');
+        return;
+    }
+    
+    const phoneNumber = "996556024449";
+    
+    let message = `Заказ: ${product.name}\n`;
+    message += `Цена: ${product.price.toLocaleString()} Сом\n`;
+    
+    // характеристики
+    if (product.specs["Процессор"]) message += `Процессор: ${product.specs["Процессор"]}\n`;
+    if (product.specs["Видеокарта"]) message += `Видеокарта: ${product.specs["Видеокарта"]}\n`;
+    if (product.specs["Оперативная память"]) message += `Память: ${product.specs["Оперативная память"]}\n`;
+    
+    message += `\nСвяжитесь для заказа`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    window.open(whatsappUrl, '_blank');
+}
+
+    function loadProductDetails() {
+        const productId = getProductIdFromURL();
+        const product = products[productId];
+        const productDetail = document.getElementById('productDetail');
+        
+        if (!product) {
+            productDetail.innerHTML = '<p style="padding:2rem;text-align:center;color:var(--muted-light);">Товар не найден. <a href="index.html" style="color:var(--purple-bright);">Вернуться в каталог</a>.</p>';
+            if (window.CyberSpaceReveal) window.CyberSpaceReveal.refresh();
+            return;
+        }
+        
+        let priceHTML = `<div class="product-price">${product.price.toLocaleString()} Сом</div>`;
+        if (product.oldPrice) {
+            priceHTML = `
+                <div class="product-price">
+                    <span class="old-price">${product.oldPrice.toLocaleString()} Сом</span>
+                    ${product.price.toLocaleString()} Сом
+                </div>
+            `;
+        }
+        
+        let specsHTML = '';
+        for (const [key, value] of Object.entries(product.specs)) {
+            specsHTML += `
+                <li>
+                    <span class="spec-label">${key}:</span>
+                    <span class="spec-value">${value}</span>
+                </li>
+            `;
+        }
+        
+        productDetail.innerHTML = `
+            <div class="product-image">
+                <img src="${product.image}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/500x400/2a2a2a/1d4ed8?text=CYBER+SPACE'">
+            </div>
+            <div class="product-info">
+                <h1 class="product-title">${product.name}</h1>
+                ${priceHTML}
+                
+                <div class="product-specs">
+                    <h3>Характеристики:</h3>
+                    <ul class="specs-list">
+                        ${specsHTML}
+                    </ul>
+                </div>
+                
+                <div class="product-description">${product.description}</div>
+                
+                <div class="order-section">
+			<button type="button" class="order-btn" onclick="orderViaWhatsApp(${product.id})">
+				<span class="btn-icon" aria-hidden="true">
+					<img src="imgs/btnlogo.png" alt="" width="22" height="22">
+				</span>
+				<span class="order-btn-label">Заказать в WhatsApp</span>
+			</button>
+
+                    <p style="margin-top: 1rem; color: var(--muted); font-size: 0.88rem;">Доставка по Кыргызстану. Гарантия 12 месяцев.</p>
+                </div>
+            </div>
+        `;
+        
+        document.title = `CYBER SPACE — ${product.name}`;
+
+        var imageEl = productDetail.querySelector('.product-image');
+        var infoEl = productDetail.querySelector('.product-info');
+        if (imageEl) imageEl.classList.add('reveal');
+        if (infoEl) infoEl.classList.add('reveal');
+        if (window.CyberSpaceReveal) window.CyberSpaceReveal.refresh();
+    }
+
+    const buyHeader = document.getElementById('buyHeader');
+    if (buyHeader) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 24) buyHeader.classList.add('is-scrolled');
+            else buyHeader.classList.remove('is-scrolled');
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        loadProductDetails();
+    });
+</script>
+  <script src="js/page-transitions.js"></script>
+
+</body>
+</html>

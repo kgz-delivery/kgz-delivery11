@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a1628">
+  <meta name="color-scheme" content="dark">
+  <title>CYBER SPACE — калькулятор сборок</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Orbitron:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/pulsar.css">
+  <link rel="stylesheet" href="css/calculator.css">
+  <link rel="stylesheet" href="css/page-transitions.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '924798157004137');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+</head>
+<body>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=924798157004137&ev=PageView&noscript=1"
+  /></noscript>
+
+  <nav class="site-nav" id="siteNav" aria-label="Основная навигация">
+    <a class="nav-brand" href="index.html"><img src="imgs/1logo.png" alt="CYBER SPACE" class="nav-brand-logo" width="160" height="42"></a>
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="navCore">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-core" id="navCore">
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="components.html">Комплектующие</a></li>
+        <li><a href="calculator.html">Калькулятор</a></li>
+        <li><a href="index.html#builds">Сборки</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="otz.html">Отзывы</a></li>
+      </ul>
+      <a class="nav-cta" href="index.html#builds">Каталог</a>
+    </div>
+  </nav>
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+  <header class="calc-hero">
+    <p class="section-kicker">Конфигуратор</p>
+    <h1>Калькулятор сборок</h1>
+    <p class="calc-lead">Соберите ПК из актуальных цен по Кыргызстану: видеокарта, процессор и остальные комплектующие. Переключайте <strong>Б/У рынок</strong> и <strong>новые магазины</strong>.</p>
+  </header>
+
+  <main class="calc-main">
+    <div class="calc-toolbar">
+      <span class="calc-toolbar-label">Источник цен</span>
+      <div class="calc-market-toggle" role="group" aria-label="Тип рынка">
+        <button type="button" class="calc-market-btn is-active" data-market="used" aria-pressed="true">Б/У рынок</button>
+        <button type="button" class="calc-market-btn" data-market="new" aria-pressed="false">Новые магазины</button>
+      </div>
+    </div>
+
+    <div class="calc-layout">
+      <div class="calc-config">
+        <section class="calc-panel" aria-labelledby="gpu-title">
+          <h2 class="calc-panel-title" id="gpu-title">Видеокарта</h2>
+          <div class="calc-brand-tabs" role="tablist" aria-label="Бренд GPU">
+            <button type="button" class="calc-brand-tab is-active" data-brand="nvidia" role="tab" aria-selected="true">NVIDIA</button>
+            <button type="button" class="calc-brand-tab" data-brand="amd" role="tab" aria-selected="false">AMD Radeon</button>
+          </div>
+          <div class="calc-field" data-focus-slot="gpu">
+            <label for="gpuSelect">Модель</label>
+            <select id="gpuSelect"></select>
+          </div>
+        </section>
+
+        <section class="calc-panel" aria-labelledby="cpu-title">
+          <h2 class="calc-panel-title" id="cpu-title">Процессор</h2>
+          <div class="calc-brand-tabs" role="tablist" aria-label="Бренд CPU">
+            <button type="button" class="calc-brand-tab is-active" data-cpu-brand="intel" role="tab" aria-selected="true">Intel Core</button>
+            <button type="button" class="calc-brand-tab" data-cpu-brand="amd" role="tab" aria-selected="false">AMD Ryzen</button>
+          </div>
+          <div class="calc-field" data-focus-slot="cpu">
+            <label for="cpuSelect">Модель</label>
+            <select id="cpuSelect"></select>
+          </div>
+        </section>
+
+        <section class="calc-panel" aria-labelledby="rest-title">
+          <h2 class="calc-panel-title" id="rest-title">Остальные комплектующие</h2>
+          <div class="calc-grid-2">
+            <div class="calc-field" data-focus-slot="mb">
+              <label for="mbSelect">Материнская плата</label>
+              <select id="mbSelect"></select>
+            </div>
+            <div class="calc-field" data-focus-slot="ram">
+              <label for="ramSelect">Оперативная память</label>
+              <select id="ramSelect"></select>
+            </div>
+            <div class="calc-field" data-focus-slot="storage">
+              <label for="storageSelect">Накопитель</label>
+              <select id="storageSelect"></select>
+            </div>
+            <div class="calc-field" data-focus-slot="psu">
+              <label for="psuSelect">Блок питания</label>
+              <select id="psuSelect"></select>
+            </div>
+            <div class="calc-field" data-focus-slot="case">
+              <label for="caseSelect">Корпус</label>
+              <select id="caseSelect"></select>
+            </div>
+            <div class="calc-field" data-focus-slot="cooler">
+              <label for="coolerSelect">Охлаждение</label>
+              <select id="coolerSelect"></select>
+            </div>
+          </div>
+          <p class="calc-hint" id="psuHint"></p>
+          <label class="calc-check">
+            <input type="checkbox" id="assemblyCheck" checked>
+            Включить сборку CYBER SPACE (тест, Windows, кабели)
+          </label>
+        </section>
+      </div>
+
+      <section class="calc-pc-stage" aria-label="Визуализация сборки ПК">
+        <p class="calc-pc-stage-title">Ваша сборка</p>
+        <div class="calc-pc-case" id="pcCaseVisual">
+          <div class="pc-slot pc-slot--cooler" data-slot="cooler" tabindex="0">
+            <span class="pc-slot-icon" aria-hidden="true">CL</span>
+            <span class="pc-slot-label">Охлаждение</span>
+            <span class="pc-slot-name">—</span>
+          </div>
+          <div class="pc-motherboard">
+            <div class="pc-slot pc-slot--cpu" data-slot="cpu" tabindex="0">
+              <span class="pc-slot-icon" aria-hidden="true">CPU</span>
+              <span class="pc-slot-label">Процессор</span>
+              <span class="pc-slot-name">—</span>
+            </div>
+            <div class="pc-slot pc-slot--ram" data-slot="ram" tabindex="0">
+              <span class="pc-slot-icon" aria-hidden="true">RAM</span>
+              <span class="pc-slot-label">Память</span>
+              <span class="pc-slot-name">—</span>
+            </div>
+            <div class="pc-slot pc-slot--mb" data-slot="mb" tabindex="0">
+              <span class="pc-slot-icon" aria-hidden="true">MB</span>
+              <span class="pc-slot-label">Плата</span>
+              <span class="pc-slot-name">—</span>
+            </div>
+            <div class="pc-slot pc-slot--storage" data-slot="storage" tabindex="0">
+              <span class="pc-slot-icon" aria-hidden="true">SSD</span>
+              <span class="pc-slot-label">Накопитель</span>
+              <span class="pc-slot-name">—</span>
+            </div>
+          </div>
+          <div class="pc-slot pc-slot--gpu" data-slot="gpu" tabindex="0">
+            <span class="pc-slot-icon" aria-hidden="true">GPU</span>
+            <span class="pc-slot-label">Видеокарта</span>
+            <span class="pc-slot-name">—</span>
+          </div>
+          <div class="pc-slot pc-slot--psu" data-slot="psu" tabindex="0">
+            <span class="pc-slot-icon" aria-hidden="true">PSU</span>
+            <span class="pc-slot-label">Блок питания</span>
+            <span class="pc-slot-name">—</span>
+          </div>
+        </div>
+        <p class="calc-pc-hint" id="pcVisualHint">Наведите на пустой слот — подсветится красным. Выберите деталь слева.</p>
+      </section>
+
+      <aside class="calc-summary-wrap" aria-labelledby="summary-title">
+        <div class="calc-summary">
+          <p class="calc-summary-kicker" id="summary-title">Ваша сборка</p>
+          <p class="calc-summary-market" id="summaryMarket">Б/У рынок</p>
+          <div class="calc-summary-total" id="summaryTotal">—</div>
+          <p class="calc-summary-range" id="summaryRange">Выберите видеокарту и процессор</p>
+          <ul class="calc-summary-list" id="summaryList"></ul>
+          <button type="button" class="calc-wa-btn" id="calcWhatsApp" disabled>Уточнить в WhatsApp</button>
+          <p class="calc-note">Цены ориентировочные по рынку KG. Точную стоимость и наличие уточняйте у менеджера.</p>
+        </div>
+      </aside>
+    </div>
+
+    <div class="calc-actions-bottom">
+      <a href="index.html#builds" class="calc-back">← К готовым сборкам</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="components.html">Комплектующие</a>
+        <a href="calculator.html">Калькулятор</a>
+        <a href="about.html">О нас</a>
+        <a href="otz.html">Отзывы</a>
+        <a href="index.html">Главная</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p class="footer-contact">Связь: <a href="mailto:cyber_space.kg@gmail.com">cyber_space.kg@gmail.com</a> <span class="footer-sep">|</span> Телефон: <a href="tel:+996556024449">+996 (556) 02-44-49</a></p>
+      <p class="footer-copy">© 2025 Компания «CYBER SPACE.kg». Все права защищены.</p>
+      <p class="footer-credit">Разработка сайта: By CYBER SPACE company</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var nav = document.getElementById('siteNav');
+      var toggle = document.getElementById('navToggle');
+      var backdrop = document.getElementById('navBackdrop');
+      var navCore = document.getElementById('navCore');
+      function setNavOpen(open) {
+        if (!nav || !toggle) return;
+        nav.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.body.style.overflow = open ? 'hidden' : '';
+      }
+      window.addEventListener('scroll', function () {
+        if (!nav) return;
+        if (window.scrollY > 24) nav.classList.add('is-scrolled');
+        else nav.classList.remove('is-scrolled');
+      });
+      if (toggle) toggle.addEventListener('click', function () { setNavOpen(!nav.classList.contains('is-open')); });
+      if (backdrop) backdrop.addEventListener('click', function () { setNavOpen(false); });
+      if (navCore) {
+        navCore.querySelectorAll('a').forEach(function (a) {
+          a.addEventListener('click', function () { setNavOpen(false); });
+        });
+      }
+      window.addEventListener('resize', function () { if (window.innerWidth > 900) setNavOpen(false); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setNavOpen(false); });
+    })();
+  </script>
+  <script src="js/calculator-data.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/page-transitions.js"></script>
+</body>
+</html>

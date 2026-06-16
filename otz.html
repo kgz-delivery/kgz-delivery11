@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0a1628">
+    <meta name="color-scheme" content="dark">
+    <title>CYBER SPACE — отзывы</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600&family=Orbitron:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/pulsar.css">
+    <link rel="stylesheet" href="css/otz.css">
+    <link rel="stylesheet" href="css/page-transitions.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '924798157004137');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+</head>
+<body class="otz-page">
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=924798157004137&ev=PageView&noscript=1"
+  /></noscript>
+
+  <nav class="site-nav" id="siteNav" aria-label="Основная навигация">
+    <a class="nav-brand" href="index.html"><img src="imgs/1logo.png" alt="CYBER SPACE" class="nav-brand-logo" width="160" height="42"></a>
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="navCore">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-core" id="navCore">
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="components.html">Комплектующие</a></li>
+        <li><a href="calculator.html">Калькулятор</a></li>
+        <li><a href="index.html#builds">Сборки</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="otz.html">Отзывы</a></li>
+        <li><a href="index.html#order">Заказ</a></li>
+      </ul>
+      <a class="nav-cta" href="index.html#builds">Каталог</a>
+    </div>
+  </nav>
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+<div class="fullscreen-overlay" id="fullscreenOverlay" role="dialog" aria-modal="true" aria-label="Просмотр фото">
+    <button type="button" class="close-btn" id="fsClose" aria-label="Закрыть">×</button>
+    <button type="button" class="nav-btn prev-btn" id="fsPrev" aria-label="Предыдущее">‹</button>
+    <img class="fullscreen-image" id="fullscreenImage" src="" alt="">
+    <button type="button" class="nav-btn next-btn" id="fsNext" aria-label="Следующее">›</button>
+    <div class="image-counter" id="imageCounter">1 / 1</div>
+</div>
+
+<main class="otz-main">
+    <header class="otz-header">
+      <p class="section-kicker">Сообщество</p>
+      <h1 class="otz-title">Отзывы клиентов</h1>
+      <p class="otz-lead">Реальные покупатели CYBER SPACE — благодарим за доверие.</p>
+    </header>
+    
+    <div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">User</div>
+            <div>
+                <div class="review-name">User</div>
+                <div class="review-date">23:19 15 января 2025</div>
+            </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">
+            Понравился комп спасибо все четко
+        </p>
+        <div class="review-photos">
+            <div class="photo-slot">
+                <img src="img/o1.jpg" 
+                     alt="Компьютер пользователя">
+            </div>
+        </div>
+        <div class="photo-label">CYBER SPACE</div>
+    </div>
+
+    <div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">User</div>
+            <div>
+                <div class="review-name">User</div>
+                <div class="review-date">21:32 14 Мая 2025</div>
+            </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">
+           спасибо, красивый комп
+        </p>
+        <div class="photo-slot" onclick="openFullscreen('img/o2.jpg')">
+           <img src="img/o2.jpg">
+            <div class="">
+            </div>
+        </div>
+        <div class="photo-label">CYBER SPACE</div>
+    </div>
+
+    <div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">S</div>
+            <div>
+                <div class="review-name">samsa</div>
+                <div class="review-date">14:50 14 марта 2025</div>
+            </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">
+            респект все сделали быстро
+        </p>
+        <div class="photo-slot" onclick="openFullscreen('img/o3.jpg')">
+           <img src="img/o3.jpg">
+            <div class="">
+            </div>
+        </div>
+        <div class="photo-label">CYBER SPACE</div>
+    </div>
+
+
+    <div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">A</div>
+            <div>
+                <div class="review-name">Арай</div>
+                <div class="review-date">00:52 11 апрель 2025</div>
+            </div>
+        </div>
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">
+            норм.
+        </p>
+        <div class="review-photos">
+            <div class="photo-slot">
+                <div><img src="img/o7.jpg" alt=""></div>
+            </div>
+            <div class="photo-slot">
+                <div><img src="img/o8.jpg" alt=""></div>
+            </div>
+            <div class="photo-slot">
+                <div>Фото 3</div>
+            </div>
+        </div>
+        <div class="photo-label">CYBER SPACE</div>
+    </div>
+
+    <!-- Отзыв 4 с фото -->
+    <div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">User</div>
+            <div>
+                <div class="review-name">User</div>
+                <div class="review-date">17:13 03 декабря 2025</div>
+            </div>
+        </div>
+        <div class="review-stars">★☆☆☆☆</div>
+        <p class="review-text">
+           задержали мой компьютер доставщики отстой не покупайте
+        </p>
+        <div class="review-photos">
+            <!-- ВАМ НУЖНО ЗАГРУЗИТЬ ФОТО СЮДА -->
+            <div class="photo-slot">
+                <div>Фото 1</div>
+            </div>
+            <div class="photo-slot">
+                <div>Фото 2</div>
+            </div>
+            <div class="photo-slot">
+                <div>Фото 3</div>
+            </div>
+        </div>
+        <div class="photo-label">CYBER SPACE</div>
+    </div>
+
+    <!-- Отзыв 5 с фото -->
+    <div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">User</div>
+            <div>
+                <div class="review-name">User</div>
+                <div class="review-date">10:30 25 ноября 2024</div>
+            </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">
+            Заебись 
+        </p>
+        <div class="review-photos">
+            <div class="photo-slot">
+                <div><img src="img/o6.jpg" alt="Фото 1"></div>
+            </div>
+            <div class="">
+            </div>
+        </div>
+        <div class="photo-label">CYBER SPACE</div>
+    </div>
+
+    <div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">А</div>
+            <div>
+                <div class="review-name">Абдурахман</div>
+                <div class="review-date">14:07 23 января 2025</div>
+            </div>
+        </div>
+        <div class="review-stars">★★☆☆☆</div>
+        <p class="review-text">
+            Отказались делать скидку
+        </p>
+        <div class="review-photos">
+            <div class="photo-slot">
+                <div><img src="img/o13.jpg" alt="Фото 1"></div>
+            </div>
+            <div class="photo-slot">
+                <div><img src="img/o14.jpg" alt="Фото 1"></div>
+            </div>
+            <div class="photo-slot">
+                <div>Фото 3</div>
+            </div>
+        </div>
+        <div class="photo-label">CYBER SPACE</div>
+    </div>
+    
+    <div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">УХ</div>
+            <div>
+                <div class="review-name">узбек ходжи</div>
+                <div class="review-date">07:14 15 января 2025</div>
+            </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">
+            кампютр якши еканг
+        </p>
+        <div class="review-photos">
+            <div class="photo-slot">
+                <div><img src="img/o11.jpg" alt="Фото 1"></div>
+            </div>
+            <div class="photo-slot">
+            <div><img src="img/o12.jpg" alt="Фото 1"></div>
+            </div>
+        </div>
+        <div class="photo-label">CYBER SPACE</div>
+    </div>
+	
+	<div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">Г</div>
+            <div>
+                <div class="review-name">ГЕЙ</div>
+                <div class="review-date">22:54 22 декабря 2025</div>
+            </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">
+            топчик
+        </p>
+        <div class="review-photos">
+            <div class="photo-slot">
+                <div><img src="img/o16.jpg" alt="Фото 1"></div>
+            </div>
+            <div class="photo-slot">
+            <div><img src="img/o15.jpg" alt="Фото 1"></div>
+            </div>
+        </div>
+        <div class="photo-label">CYBER SPACE</div>
+    </div>
+	
+  <div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">D</div>
+            <div>
+                <div class="review-name">donk666</div>
+                <div class="review-date">18:37 14 Август 2025</div>
+            </div>
+        </div>
+		
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">
+           cэкономил на шавуху)) спасибо!
+        </p>
+        <div class="photo-slot" onclick="openFullscreen('img/o2.jpg')">
+           <img src="img/o29.jpg">
+            <div class="">
+            </div>
+        </div>
+        <div class="photo-label">CYBER SPACE</div>
+    </div>
+
+	<div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">R</div>
+            <div>
+                <div class="review-name">Rasulov</div>
+                <div class="review-date">20:18 17 ноября 2025</div>
+            </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">
+        я чуть чуть вах*** слишком дешево за такое качество 
+        </p>
+        <div class="review-photos">
+            <div class="photo-slot">
+                <div><img src="img/o22.jpg" alt="Фото 1"></div>
+            </div>
+            <div class="photo-slot">
+            <div><img src="" alt=""></div>
+            </div>
+        </div>
+        <div class="photo-label">CYBER SPACE</div>
+    </div>
+	
+  <div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">R</div>
+            <div>
+                <div class="review-name">Russ</div>
+                <div class="review-date">19:43 24 август 2025</div>
+            </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">
+		👌
+        </p>
+        <div class="photo-slot" onclick="openFullscreen('img/o24.jpg')">
+           <img src="img/o24.jpg">
+            <div class="">
+            </div>
+        </div>
+        <div class="photo-label">CYBER SPACE</div>
+    </div>
+
+  <div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">NN</div>
+            <div>
+                <div class="review-name">Nurs</div>
+                <div class="review-date">17:23 11 октябрь 2025</div>
+            </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">
+        </p>
+        <div class="photo-slot" onclick="openFullscreen('img/o25.jpg')">
+           <img src="img/o25.jpg">
+            <div class="">
+            </div>
+        </div>
+        <div class="photo-label">CYBER SPACE</div>
+    </div>
+
+<div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">S</div>
+            <div>
+                <div class="review-name">Sabyrovvv</div>
+                <div class="review-date">10:03 14 июль 2025</div>
+            </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">
+        менеджер добрый дал поиграть перед покупкой  пасибо
+        </p>
+        <div class="review-photos">
+            <div class="photo-slot">
+                <div><img src="img/o21.jpg" alt="Фото 1"></div>
+            </div>
+            <div class="photo-slot">
+            
+            </div>
+        </div>
+        <div class="photo-label">CYBER SPACE</div>
+    </div>
+		
+	<div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">А</div>
+            <div>
+                <div class="review-name">Aziz</div>
+                <div class="review-date">13:19 14 декабря 2025</div>
+            </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">
+           Cупер 
+        </p>
+        <div class="review-photos">
+            <div class="photo-slot">
+                <div><img src="img/o17.jpg" alt="Фото 1"></div>
+            </div>
+        </div>
+        <div class="photo-label">CYBER SPACE</div>
+    </div>
+  
+  <div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">А</div>
+            <div>
+                <div class="review-name">Aрс</div>
+                <div class="review-date">17:38 18 ноября 2025</div>
+            </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">
+        весь сетапчик собрал ваще кайф благодарю за Мониторы
+        </p>
+        <div class="review-photos">
+            <div class="photo-slot">
+                <div><img src="img/o20.jpg" alt="Фото 1"></div>
+            </div>
+        </div>
+        <div class="photo-label">CYBER SPACE</div>
+    </div>
+  
+	<div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">ZX</div>
+            <div>
+                <div class="review-name">zxcghoul</div>
+                <div class="review-date">15:34 1 декабря 2025</div>
+            </div>
+        </div>
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">
+        Лучший магазин   
+        </p>
+        <div class="review-photos">
+            <div class="photo-slot">
+                <div><img src="img/o18.jpg" alt="Фото 1"></div>
+            </div>
+        </div>
+        <div class="photo-label">CYBER SPACE</div>
+    </div>  
+    
+		<div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">АЗ</div>
+            <div>
+                <div class="review-name">Антон Злыднев</div>
+                <div class="review-date">11:09 2 сентября 2025</div>
+            </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">
+        брал для сына. Парень очень вежливый все обьяснил буду приходить еще спасибо   
+        </p>
+        <div class="review-photos">
+            <div class="photo-slot">
+                <div><img src="img/o19.jpg" alt="Фото 1"></div>
+            </div>
+        </div>
+        <div class="photo-label">CYBER SPACE</div>
+    </div>  
+	
+    <div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">МИ</div>
+            <div>
+                <div class="review-name">Марина И</div>
+                <div class="review-date">19:44 8 декабря 2024</div>
+            </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">
+            Приобрела для домашнего использования. Компьютер работает 
+            быстро тихо,  менеджеры вежливые рекомендую и процветания вашей компании!
+         </p>
+    </div>
+    
+	<div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">ME</div>
+            <div>
+                <div class="review-name">mers E 5,5</div>
+                <div class="review-date">16:56 7 декабря 2024</div>
+            </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">
+        
+         </p>
+    </div>
+	
+    <div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">Ж</div>
+            <div>
+                <div class="review-name">Жабкаыы</div>
+                <div class="review-date">10:30 25 ноября 2024</div>
+            </div>
+        </div>
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">
+            Купил за 30тыс компьютер 2 дня задержалась в доставке брал для игр играется очень даже хорошо спсасибо 
+        </p>
+    </div>
+    
+	<div class="review-card">
+        <div class="review-header">
+            <div class="review-avatar">M</div>
+            <div>
+                <div class="review-name">Marlen</div>
+                <div class="review-date">14:27 3 декабря 2024</div>
+            </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">
+        
+         </p>
+    </div>
+	
+    <div class="review-card otz-placeholder-card reveal">
+        <p>Здесь будут отображаться новые отзывы.</p>
+        <p>Купили у нас компьютер? Оставьте отзыв — мы будем рады.</p>
+    </div>
+    <div class="otz-back-wrap reveal">
+        <a href="index.html" class="otz-back"><span aria-hidden="true">←</span> В каталог</a>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="about.html">О нас</a>
+        <a href="index.html#builds">Сборки</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p class="footer-contact">Связь: <a href="mailto:cyber_space.kg@gmail.com">cyber_space.kg@gmail.com</a> <span class="footer-sep">|</span> Телефон: <a href="tel:+996556024449">+996 (556) 02-44-49</a></p>
+      <p class="footer-copy">© 2025 Компания «CYBER SPACE.kg». Все права защищены.</p>
+      <p class="footer-credit">Разработка сайта: By CYBER SPACE company</p>
+    </div>
+</footer>
+
+<script>
+(function () {
+    var currentImages = [];
+    var currentIndex = 0;
+    var overlay = document.getElementById('fullscreenOverlay');
+    var fullscreenImage = document.getElementById('fullscreenImage');
+    var imageCounter = document.getElementById('imageCounter');
+    var closeBtn = document.getElementById('fsClose');
+    var prevBtn = document.getElementById('fsPrev');
+    var nextBtn = document.getElementById('fsNext');
+
+    function openFullscreen(images, index) {
+        if (!images || images.length === 0 || !overlay) return;
+        currentImages = images;
+        currentIndex = Math.max(0, Math.min(index, currentImages.length - 1));
+        fullscreenImage.src = currentImages[currentIndex];
+        imageCounter.textContent = (currentIndex + 1) + ' / ' + currentImages.length;
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeFullscreen() {
+        if (!overlay) return;
+        overlay.classList.remove('is-open');
+        document.body.style.overflow = '';
+        if (fullscreenImage) fullscreenImage.src = '';
+        currentImages = [];
+    }
+
+    function changeImage(direction) {
+        if (currentImages.length === 0) return;
+        currentIndex += direction;
+        if (currentIndex < 0) currentIndex = currentImages.length - 1;
+        else if (currentIndex >= currentImages.length) currentIndex = 0;
+        fullscreenImage.src = currentImages[currentIndex];
+        imageCounter.textContent = (currentIndex + 1) + ' / ' + currentImages.length;
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeFullscreen);
+    if (prevBtn) prevBtn.addEventListener('click', function () { changeImage(-1); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { changeImage(1); });
+    if (overlay) {
+        overlay.addEventListener('click', function (e) {
+            if (e.target === overlay) closeFullscreen();
+        });
+    }
+
+    document.addEventListener('keydown', function (e) {
+        if (!overlay || !overlay.classList.contains('is-open')) return;
+        if (e.key === 'Escape') closeFullscreen();
+        else if (e.key === 'ArrowLeft') changeImage(-1);
+        else if (e.key === 'ArrowRight') changeImage(1);
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.photo-slot').forEach(function (slot) {
+            slot.addEventListener('click', function (e) {
+                e.stopPropagation();
+                var reviewCard = this.closest('.review-card');
+                if (!reviewCard) return;
+                var images = [];
+                reviewCard.querySelectorAll('.photo-slot img').forEach(function (img) {
+                    var s = img && img.getAttribute('src');
+                    if (s && s.trim() !== '') images.push(img.src);
+                });
+                if (images.length === 0) return;
+                var currentImg = this.querySelector('img');
+                var idx = currentImg ? images.indexOf(currentImg.src) : 0;
+                if (idx < 0) idx = 0;
+                openFullscreen(images, idx);
+            });
+        });
+
+        var nav = document.getElementById('siteNav');
+        var toggle = document.getElementById('navToggle');
+        var backdrop = document.getElementById('navBackdrop');
+        var navCore = document.getElementById('navCore');
+        function setNavOpen(open) {
+            if (!nav || !toggle) return;
+            nav.classList.toggle('is-open', open);
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            if (window.innerWidth <= 900) document.body.style.overflow = open ? 'hidden' : '';
+        }
+        if (toggle) toggle.addEventListener('click', function () {
+            setNavOpen(!nav.classList.contains('is-open'));
+        });
+        if (backdrop) backdrop.addEventListener('click', function () { setNavOpen(false); });
+        if (navCore) {
+            navCore.querySelectorAll('a').forEach(function (a) {
+                a.addEventListener('click', function () { setNavOpen(false); });
+            });
+        }
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 900) setNavOpen(false);
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && nav && nav.classList.contains('is-open')) setNavOpen(false);
+        });
+        window.addEventListener('scroll', function () {
+            if (!nav) return;
+            if (window.scrollY > 24) nav.classList.add('is-scrolled');
+            else nav.classList.remove('is-scrolled');
+        });
+
+    });
+})();
+</script>
+  <script src="js/page-transitions.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+/* Страница комплектующих — CYBER SPACE */
+
+.components-hero {
+  position: relative;
+  z-index: 1;
+  padding: calc(var(--nav-total) + 2.75rem) clamp(1rem, 4vw, 3rem) 2.5rem;
+  padding-left: max(clamp(1rem, 4vw, 3rem), var(--safe-left));
+  padding-right: max(clamp(1rem, 4vw, 3rem), var(--safe-right));
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.components-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+  background: linear-gradient(120deg, var(--white) 20%, var(--purple-bright));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.components-hero .section-kicker {
+  margin-bottom: 0.5rem;
+}
+
+.components-lead {
+  margin: 0;
+  color: var(--muted-light);
+  font-size: 1.05rem;
+}
+
+.components-main {
+  position: relative;
+  z-index: 1;
+  padding: 0 clamp(1rem, 4vw, 3rem) max(3rem, var(--safe-bottom));
+  padding-left: max(clamp(1rem, 4vw, 3rem), var(--safe-left));
+  padding-right: max(clamp(1rem, 4vw, 3rem), var(--safe-right));
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.comp-section {
+  margin-bottom: 3rem;
+}
+
+.comp-cat-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--border);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.comp-cat-title::before {
+  content: "";
+  width: 6px;
+  height: 1.15em;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--purple-bright), var(--purple-deep));
+  box-shadow: 0 0 14px var(--purple-glow);
+}
+
+.discount-pill {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  vertical-align: middle;
+  background: rgba(30, 64, 175, 0.1);
+  border: 1px solid var(--border);
+  color: var(--purple-bright);
+}
+
+.components-actions {
+  max-width: 1280px;
+  margin: 2rem auto 0;
+  padding: 0 clamp(1rem, 4vw, 3rem) max(1.5rem, var(--safe-bottom));
+  padding-left: max(clamp(1rem, 4vw, 3rem), var(--safe-left));
+  padding-right: max(clamp(1rem, 4vw, 3rem), var(--safe-right));
+}
+
+.components-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.9rem 1.35rem;
+  min-height: var(--touch-min);
+  border-radius: 999px;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  color: var(--purple-bright);
+  text-decoration: none;
+  transition: background 0.25s, border-color 0.25s, color 0.25s;
+}
+
+.components-back:hover {
+  background: rgba(30, 64, 175, 0.08);
+  border-color: var(--purple-bright);
+  color: var(--text);
+}
